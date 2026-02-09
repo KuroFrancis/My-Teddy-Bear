@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="https://fonts.cdnfonts.com/css/astellan" rel="stylesheet">
     <title>Will You Be My Valentine?  💝</title>
     <style>
@@ -58,46 +58,6 @@
             }
         }
 
-        /* Writing Animation Container 
-        .intro-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .writing-text {
-            font-size: 3em;
-            color: #d63384;
-            font-family: 'Astellan', cursive;
-            white-space: nowrap;
-            font-weight: 900;
-            overflow: hidden;
-            border-right: 3px solid #d63384;
-            animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
-            opacity: 0;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-                opacity: 1;
-            }
-            to {
-                width: 100%;
-                opacity: 1;
-            }
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-
-
         /* ======================================
            KINETIC TYPOGRAPHY ANIMATION (INTRO)
            ====================================== */
@@ -112,7 +72,7 @@
             overflow: hidden;
         }
 
-        /* Background Image - ADD YOUR GIRLFRIEND'S PHOTO HERE */
+        /* Background Image */
         .intro-bg-image {
             position: absolute;
             width: 100%;
@@ -151,7 +111,7 @@
             }
         }
 
-        /* Kinetic Text Layers */
+        /* Kinetic Text Layers - MOBILE RESPONSIVE */
         .intro-text {
             position: absolute;
             width: 100%;
@@ -162,77 +122,35 @@
             text-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
             z-index: 10;
             opacity: 0;
+            padding: 0 20px;
         }
 
-        /* Scene 1
-        .intro-scene1-1 {
-            top: 30%;
-            font-size: 120px;
-            animation: slideFromTop 1s ease-out 0.5s forwards;
-        }
-        .intro-scene1-2 {
-            top: 50%;
-            font-size: 80px;
-            font-family: 'Open Sans', sans-serif;
-            color: #d4af37;
-            animation: fadeInScale 1s ease-out 1.5s forwards;
-        } */
-
-        /* Scene 2 */
+        /* Scene 2 - RESPONSIVE */
         .intro-scene2-1 {
             top: 10%;
-            font-size: 140px;
+            font-size: clamp(50px, 10vw, 140px);
             animation: slideFromLeft 1s ease-out 3s forwards;
         }
         .intro-scene2-2 {
             top: 25%;
-            font-size: 120px;
+            font-size: clamp(45px, 9vw, 120px);
             animation: slideFromRight 1s ease-out 3.5s forwards;
         }
         .intro-scene2-3 {
             top: 40%;
-            font-size: 120px;
+            font-size: clamp(45px, 9vw, 120px);
             animation: slideFromBottom 1s ease-out 4s forwards;
         }
-
         .intro-scene2-4 {
             top: 55%;
-            font-size: 120px;
+            font-size: clamp(40px, 8vw, 120px);
             animation: slideFromBottom 1s ease-out 4s forwards;
         }
-        /* Scene 3 */
-        /* .intro-scene3-1 {
-            top: 35%;
-            font-size: 90px;
-            font-family: 'Lato', sans-serif;
-            color: #ff69b4;
-            animation: fadeInScale 1s ease-out 5.5s forwards;
-        }
-        .intro-scene3-2 {
-            top: 50%;
-            font-size: 110px;
-            animation: heartBeat 1s ease-out 6.5s forwards;
-        }
-
-        /* Scene 4 */
-        /* .intro-scene4-1 {
-            top: 40%;
-            font-size: 150px;
-            font-family: 'Astellan', cursive;
-            color: #d4af37;
-            animation: rotateIn 1.5s ease-out 8s forwards;
-        }
-        .intro-scene4-2 {
-            top: 60%;
-            font-size: 70px;
-            font-family: 'Lato', sans-serif;
-            animation: fadeInUp 1s ease-out 9.5s forwards;
-        } */ */
 
         /* Floating Hearts */
         .intro-heart {
             position: absolute;
-            font-size: 50px;
+            font-size: clamp(30px, 5vw, 50px);
             opacity: 0;
             z-index: 5;
             animation: floatHeart 4s ease-in-out infinite;
@@ -308,7 +226,7 @@
         /* Main Content */
         .main-content {
             display: none;
-            padding: 60px 20px;
+            padding: clamp(30px, 5vw, 60px) 20px;
             max-width: 1400px;
             margin: 0 auto;
             animation: fadeIn 1.5s ease-in;
@@ -321,7 +239,7 @@
             position: fixed;
             top: 15%;
             right: 5%;
-            font-size: 4em;
+            font-size: clamp(2em, 5vw, 4em);
             opacity: 0.4;
             animation: floatCupid 6s ease-in-out infinite;
             z-index: -1;
@@ -351,7 +269,7 @@
             text-align: center;
             margin-bottom: 40px;
             position: relative;
-            padding: 30px;
+            padding: clamp(20px, 4vw, 30px);
             background: white;
             border-radius: 25px;
             box-shadow: 0 10px 40px rgba(214, 51, 132, 0.2);
@@ -363,7 +281,7 @@
         .header::after {
             content: '💝';
             position: absolute;
-            font-size: 3em;
+            font-size: clamp(2em, 4vw, 3em);
             animation: pulse 2s ease-in-out infinite;
         }
 
@@ -390,7 +308,7 @@
         }
 
         .header h1 {
-            font-size: 3em;
+            font-size: clamp(1.8em, 5vw, 3em);
             color: #d63384;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
@@ -399,12 +317,11 @@
         }
 
         .header p {
-            font-size: 1.3em;
+            font-size: clamp(1em, 3vw, 1.3em);
             color: #e83e8c;
             position: relative;
             z-index: 1;
         }
-
 
         /* Collage Photo Gallery */
         .photo-collage {
@@ -433,7 +350,7 @@
         .photo-frame img {
             width: 100%;
             height: 100%;
-            object-fit: fill;
+            object-fit: cover;
             display: block;
         }
 
@@ -527,7 +444,7 @@
         .nicknames-section {
             background: white;
             border-radius: 25px;
-            padding: 40px 30px;
+            padding: clamp(30px, 5vw, 40px) clamp(20px, 4vw, 30px);
             margin-bottom: 50px;
             box-shadow: 0 10px 40px rgba(219, 185, 202, 0.25);
             border: 3px solid #ffc1e0;
@@ -543,7 +460,7 @@
             left: 0;
             right: 0;
             text-align: center;
-            font-size: 1.5em;
+            font-size: clamp(1em, 2vw, 1.5em);
             opacity: 0.2;
             letter-spacing: 20px;
             pointer-events: none;
@@ -556,7 +473,7 @@
             left: 0;
             right: 0;
             text-align: center;
-            font-size: 1.5em;
+            font-size: clamp(1em, 2vw, 1.5em);
             opacity: 0.2;
             letter-spacing: 20px;
             pointer-events: none;
@@ -566,7 +483,7 @@
             color: #d63384;
             text-align: center;
             margin-bottom: 30px;
-            font-size: 2.2em;
+            font-size: clamp(1.5em, 4vw, 2.2em);
             position: relative;
             z-index: 1;
         }
@@ -591,7 +508,7 @@
             color: white;
             padding: 12px 24px;
             border-radius: 25px;
-            font-size: 1.1em;
+            font-size: clamp(0.9em, 2.5vw, 1.1em);
             box-shadow: 0 5px 15px rgba(220, 92, 156, 0.3);
             transition: all 0.3s ease;
             border: 2px solid #fff;
@@ -608,7 +525,6 @@
             margin-right: 5px;
         }
 
-
         /* Question Section */
         .question-section {
             text-align: center;
@@ -617,7 +533,7 @@
             min-height: 400px;
             background: white;
             border-radius: 25px;
-            padding: 40px 20px;
+            padding: clamp(30px, 5vw, 40px) 20px;
             box-shadow: 0 15px 50px rgba(214, 51, 132, 0.3);
             border: 3px solid #ffc1e0;
         }
@@ -627,7 +543,7 @@
         .question-section::after {
             content: '🌹';
             position: absolute;
-            font-size: 4em;
+            font-size: clamp(2em, 5vw, 4em);
             opacity: 0.6;
             animation: sway 3s ease-in-out infinite;
         }
@@ -655,7 +571,7 @@
         }
         
         .question-section h2 {
-            font-size: 2.5em;
+            font-size: clamp(1.3em, 4vw, 2.5em);
             color: #d63384;
             margin-bottom: 30px;
             position: relative;
@@ -670,8 +586,14 @@
             content: ' 💝';
         }
 
+        .question-section h2 img {
+            width: clamp(40px, 8vw, 60px);
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
         .funny-message {
-            font-size: 1.4em;
+            font-size: clamp(1em, 3vw, 1.4em);
             color: #8b6f6f;
             margin-bottom: 25px;
             min-height: 40px;
@@ -684,7 +606,8 @@
         }
 
         .gif-container img {
-            max-width: 300px;
+            max-width: clamp(250px, 80vw, 1000px);
+            width: 100%;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
@@ -697,8 +620,8 @@
         }
 
         .btn {
-            font-size: 1.4em;
-            padding: 18px 60px;
+            font-size: clamp(1em, 3vw, 1.4em);
+            padding: clamp(14px, 3vw, 18px) clamp(40px, 8vw, 60px);
             border: none;
             border-radius: 50px;
             cursor: pointer;
@@ -742,7 +665,7 @@
         .success-page::after {
             content: '🎉';
             position: absolute;
-            font-size: 5em;
+            font-size: clamp(3em, 6vw, 5em);
             opacity: 0.6;
             animation: celebrate 2s ease-in-out infinite;
         }
@@ -756,17 +679,23 @@
             right: 10%;
             animation-delay: 1s;
         }
+
+        @keyframes celebrate {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(15deg) scale(1.1); }
+        }
+
         .success-page {
             display: none;
             text-align: center;
-            padding: 60px 20px;
+            padding: clamp(40px, 6vw, 60px) 20px;
             max-width: 1000px;
             margin: 0 auto;
             animation: fadeIn 1.5s ease-in;
         }
 
         .success-page h1 {
-            font-size: 3.5em;
+            font-size: clamp(2em, 6vw, 3.5em);
             color: #2c1810;
             margin-bottom: 40px;
             font-weight: 400;
@@ -783,6 +712,15 @@
             }
         }
 
+        .success-page > img {
+            width: clamp(250px, 60vw, 450px);
+            margin: 20px 0;
+        }
+
+        .success-page > p {
+            font-size: clamp(1em, 3vw, 1.5em);
+        }
+
         .success-photo {
             margin: 40px 0;
             background: white;
@@ -793,16 +731,15 @@
         }
 
         .success-photo img {
-            width: 600px;
-            height: 600px;
+            width: clamp(300px, 80vw, 600px);
+            height: clamp(300px, 80vw, 600px);
             object-fit: cover;
             border-radius: 20px;
-             }
+        }
 
         .success-photo-placeholder {
-            width: 600px;
-            max-width: 100%;
-            height: 600px;
+            width: clamp(300px, 80vw, 600px);
+            height: clamp(300px, 80vw, 600px);
             background: linear-gradient(135deg, #e8d5d5 0%, #d4a5a5 100%);
             border-radius: 4px;
             display: flex;
@@ -812,24 +749,36 @@
             font-size: 1.3em;
         }
 
+        /* Video Container - MOBILE OPTIMIZED */
         .video-container {
-            margin: 50px 0;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
-            display: inline-block;
+            margin: 50px auto;
+            max-width: 550px;
+            width: 100%;
+            padding: 0 15px;
         }
 
-        .video-container video {
-            max-width: 700px;
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 177.78%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .video-wrapper iframe,
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            border-radius: 4px;
+            height: 100%;
+            border: none;
         }
 
         .video-placeholder {
-            width: 700px;
-            max-width: 100%;
+            width: 100%;
+            max-width: 700px;
             height: 400px;
             background: linear-gradient(135deg, #e8d5d5 0%, #d4a5a5 100%);
             border-radius: 4px;
@@ -843,11 +792,11 @@
         }
 
         .love-message {
-            font-size: 1.35em;
+            font-size: clamp(1em, 3vw, 1.35em);
             color: #2c1810;
             line-height: 2;
             margin: 50px auto;
-            padding: 50px;
+            padding: clamp(30px, 5vw, 50px);
             background: white;
             border-radius: 8px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
@@ -859,10 +808,10 @@
             display: inline-block;
             background: #1DB954;
             color: white;
-            padding: 18px 45px;
+            padding: clamp(14px, 3vw, 18px) clamp(30px, 5vw, 45px);
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: clamp(1em, 3vw, 1.2em);
             margin-top: 30px;
             box-shadow: 0 8px 25px rgba(29, 185, 84, 0.3);
             transition: all 0.3s ease;
@@ -924,26 +873,13 @@
             .photo-frame:nth-child(6) { bottom: 50px; left: 30%; }
             .photo-frame:nth-child(7) { bottom: 50px; left: 50%; }
             .photo-frame:nth-child(8) { bottom: 50px; right: 30%; }
+
+            .video-wrapper {
+                padding-bottom: 56.25%; /* 16:9 for tablets */
+            }
         }
 
         @media (max-width: 768px) {
-            .writing-text {
-                font-size: 2em;
-            }
-
-            .header h1 {
-                font-size: 2.2em;
-            }
-
-            .question-section h2 {
-                font-size: 2em;
-            }
-
-            .btn {
-                font-size: 1.1em;
-                padding: 14px 40px;
-            }
-
             .photo-collage {
                 height: 500px;
             }
@@ -953,19 +889,34 @@
                 height: 190px !important;
             }
 
-            .success-page h1 {
-                font-size: 2.2em;
-            }
-
-            .nickname-tag {
-                font-size: 0.95em;
-                padding: 10px 22px;
+            .buttons-container {
+                height: 250px;
             }
 
             .nicknames-section,
             .question-section,
             .love-message {
                 padding: 30px 20px;
+            }
+
+            /* Video wrapper for mobile */
+            .video-wrapper {
+                padding-bottom: 56.25%; /* 16:9 aspect ratio for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                margin-bottom: 30px;
+                padding: 20px;
+            }
+
+            .nicknames-section {
+                padding: 20px;
+            }
+
+            .success-page {
+                padding: 30px 15px;
             }
         }
     </style>
@@ -975,7 +926,7 @@
          KINETIC TYPOGRAPHY INTRO ANIMATION
          ====================================== -->
     <div class="intro-container" id="introContainer">
-        <!-- Background Image - ADD HER PHOTO URL HERE -->
+        <!-- Background Image -->
         <img src="https://i.ibb.co/4ZDZ1fZh/Whats-App-Image-2026-02-08-at-2-44-49-AM.jpg" alt="Beautiful moment" class="intro-bg-image" id="introBgImage">
         
         <!-- Animated Circles -->
@@ -987,11 +938,8 @@
         <!-- Scene 2: Main Message -->
         <div class="intro-text intro-scene2-1">A</div>
         <div class="intro-text intro-scene2-2">MESSAGE</div>
-
-        <!-- Scene 3: Heart Message -->
         <div class="intro-text intro-scene2-3">FOR</div>
         <div class="intro-text intro-scene2-4">MY TEDDY BEAR 🧸🧸</div>
-
 
         <!-- Floating Hearts -->
         <div class="intro-heart intro-heart1">💖</div>
@@ -1003,7 +951,6 @@
         <!-- Sparkles Container -->
         <div id="introSparkles"></div>
     </div>
-
 
     <!-- Main Content -->
     <div class="main-content" id="mainContent">
@@ -1023,37 +970,31 @@
                 <div class="photo-placeholder">
                      <img src="https://i.ibb.co/fYj3pP5r/Whats-App-Image-2026-01-17-at-4-26-02-PM.jpg" alt="Beautiful moments">
                 </div>
-                <!-- <img src="URL_TO_HER_PHOTO_2" alt="Beautiful moments"> -->
             </div>
             <div class="photo-frame">
                 <div class="photo-placeholder">
                     <img src="https://i.ibb.co/pjyspJMW/Whats-App-Image-2026-01-07-at-5-58-31-PM.jpg" alt="Beautiful moments">
                 </div>
-                
             </div>
             <div class="photo-frame">
                 <div class="photo-placeholder">
                     <img src="https://i.ibb.co/nMBXLn6J/Whats-App-Image-2026-01-07-at-5-58-32-PM-1.jpg" alt="Beautiful moments">
                 </div>
-                <!-- <img src="URL_TO_HER_PHOTO_4" alt="Beautiful moments"> -->
             </div>
             <div class="photo-frame">
                 <div class="photo-placeholder">
                     <img src="https://i.ibb.co/s9qjX3vH/Whats-App-Image-2026-02-07-at-1-45-34-PM.jpg" alt="Beautiful moments">
                 </div>
-                <!-- <img src="URL_TO_HER_PHOTO_5" alt="Beautiful moments"> -->
             </div>
             <div class="photo-frame">
                 <div class="photo-placeholder">
                     <img src="https://i.ibb.co/vCWMLKMn/Whats-App-Image-2026-02-07-at-1-06-02-PM-1.jpg" alt="Beautiful moments">
                 </div>
-                <!-- <img src="URL_TO_HER_PHOTO_6" alt="Beautiful moments"> -->
             </div>
             <div class="photo-frame">
                 <div class="photo-placeholder">
                     <img src="https://i.ibb.co/G3WWXbNy/Whats-App-Image-2026-01-07-at-6-15-48-PM.jpg" alt="Beautiful moments">
                 </div>
-                <!-- <img src="URL_TO_HER_PHOTO_7" alt="Beautiful moments"> -->
             </div>
         </div>
 
@@ -1061,7 +1002,6 @@
         <div class="nicknames-section">
             <h2>All The Ways I Call You Mine</h2>
             <div class="nicknames-grid">
-                <!-- Edit these nicknames -->
                 <div class="nickname-tag">My Teddy Bear 🧸🧸</div>
                 <div class="nickname-tag">My Baby</div>
                 <div class="nickname-tag">My Umugara Princess</div>
@@ -1077,19 +1017,18 @@
                 <div class="nickname-tag">My Cinnamon Skinned Baby</div>
                 <div class="nickname-tag">Ukachi</div>
                 <div class="nickname-tag">Winner of My Heart</div>
-                <!-- Add more nicknames as needed -->
             </div>
         </div>
 
         <!-- Question Section -->
         <div class="question-section">
             <h2>
-                    My Teddy Bear Will You Be My Valentine ? 
-                <img src="https://i.ibb.co/L3fyHm5/1108e48d-ee11-4fac-a58f-d6556ca930dc.webp" style="width: 60px; vertical-align: middle; margin-right: 15px;">    
+                <img src="https://i.ibb.co/L3fyHm5/1108e48d-ee11-4fac-a58f-d6556ca930dc.webp" style="width: clamp(40px, 8vw, 60px); vertical-align: middle; margin-right: 15px;">    
+                My Teddy Bear Will You Be My Valentine ? 
             </h2>
             <div class="funny-message" id="funnyMessage"></div>
             <div class="gif-container" id="gifContainer">
-                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWFrcG5lOXN2cWYyc2N0dHl4MG16YTd6dHdpOHY1M3hlOXJvZTkyNSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1JmGiBtqTuehfYxuy9/giphy.gif" style="max-width: 1000px;">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWFrcG5lOXN2cWYyc2N0dHl4MG16YTd6dHdpOHY1M3hlOXJvZTkyNSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1JmGiBtqTuehfYxuy9/giphy.gif" alt="Initial GIF">
             </div>
             <div class="buttons-container">
                 <button class="btn btn-yes" id="yesBtn">Osscorf Yes</button>
@@ -1098,12 +1037,11 @@
         </div>
     </div>
 
-
     <!-- Success Page -->
     <div class="success-page" id="successPage">
         <h1>I Knew You Would Say Yes 💕</h1>
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWU3ODRwaTdzbG5qczc5aWNkdm5jZGpkbHMyYjNvdXh1dGNvdWV5eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ytu2GUYbvhz7zShGwS/giphy.gif" style="width: 450px; margin: 20px 0;">
-        <p style="font-size: 1.5em; color: #8b6f6f; margin-bottom: 40px; font-style: italic;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWU3ODRwaTdzbG5qczc5aWNkdm5jZGpkbHMyYjNvdXh1dGNvdWV5eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ytu2GUYbvhz7zShGwS/giphy.gif" style="width: clamp(250px, 60vw, 450px); margin: 20px 0;">
+        <p style="font-size: clamp(1em, 3vw, 1.5em); color: #8b6f6f; margin-bottom: 40px; font-style: italic;">
             I'm yours forever, I'm happily finished
         </p>
         
@@ -1112,20 +1050,19 @@
             <div class="success-photo-placeholder">
                <img src="https://i.ibb.co/1GpdkS3y/Whats-App-Image-2026-02-08-at-3-44-08-AM.jpg" alt="Us Together" style="object-fit: cover;">
             </div>
-            <!-- <img src="URL_TO_PHOTO_OF_US" alt="Us Together"> -->
         </div>
 
-        <!-- Video -->
-
-        <div class="video-container" style="margin: 40px auto; max-width: 550px; width: 100%;">
-            <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
+        <!-- Video - MOBILE OPTIMIZED -->
+        <div class="video-container">
+            <div class="video-wrapper">
                 <iframe 
                     src="https://drive.google.com/file/d/1T4vORLcJtQ_Jv60TYYeglHd5aSOZ2qyB/preview" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                    allow="autoplay">
+                    allow="autoplay; fullscreen"
+                    allowfullscreen>
                 </iframe>
             </div>
         </div>
+
         <!-- Love Message -->
         <div class="love-message" id="loveMessage">
             How I've fallen for someone so deeply for the first time in my life is unexplainable. 
@@ -1139,14 +1076,13 @@
             <br>  
             My Sweet Baby
             <br><br>
-            
         </div>
 
         <!-- Spotify Playlist -->
         <a href="https://open.spotify.com/playlist/2jeoycfB05NP4QxOsd7oMH?si=K21ngqxvSO6kaVuVJfC9iA&pt=9fe7552a1ecb08b15423a655a5fceaed&pi=DdBlSE_8T6iCe" class="spotify-link" target="_blank">
             🎵 Our Playlist
         </a>
-        <p style="margin-top: 15px; color: #8b6f6f; font-size: 0.9em;">
+        <p style="margin-top: 15px; color: #8b6f6f; font-size: clamp(0.8em, 2vw, 0.9em);">
             A playlist of songs that remind me of you
         </p>
     </div>
@@ -1155,27 +1091,18 @@
     <div class="hearts" id="heartsContainer"></div>
 
     <script>
-        // Text to animate
-        const text = "M e s s a g e  F o r  M y  T e d d y  B e a r  🧸🫠🧸 ";
-        const writingTextEl = document.getElementById('writingText');
-        let charIndex = 0;
-
-        // Animate text character by character
-        function typeWriter() {
-            if (charIndex < text.length) {
-                const span = document.createElement('span');
-                span.textContent = text.charAt(charIndex);
-                span.style.animationDelay = (charIndex * 0.1) + 's';
-                writingTextEl.appendChild(span);
-                charIndex++;
-                setTimeout(typeWriter, 100);
-            }
+        // Create sparkles for intro animation
+        const introSparkles = document.getElementById('introSparkles');
+        for (let i = 0; i < 50; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'intro-sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            introSparkles.appendChild(sparkle);
         }
 
-        // Start typing animation after a short delay
-        setTimeout(typeWriter, 1500);
-
-        // Show main content after writing animation
+        // Show main content after animation
         setTimeout(() => {
             document.getElementById('introContainer').style.display = 'none';
             document.getElementById('mainContent').style.display = 'block';
